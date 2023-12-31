@@ -11,3 +11,6 @@ new_value = {"$set": {"address": "Canyon 123"}} # güncelleme operatörü kullan
 result = collection.update_one(query, new_value)
 print("Eşleşen dökümanların sayısı: ", result.matched_count)
 print("Değiştirilen dökümanların sayısı: ", result.modified_count)
+
+
+client.close()

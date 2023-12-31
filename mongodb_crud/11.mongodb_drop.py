@@ -5,7 +5,7 @@ db = client["mydb"]
 
 collection_name = input("Silinecek koleksiyon adını giriniz:")
 if "programs" in db.list_collection_names():
-    collection = db[collections_name]
+    collection = db[collection_name]
     collection.drop()
     print(f"{collection_name} isimli koleksiyon silindi.")
 else:
@@ -18,3 +18,5 @@ if db_name in client.list_database_names():
     print(f"{db_name} isimli database silindi.")
 else:
     print(f"{db_name} isimli bir database mevcut değil.")
+
+client.close()
