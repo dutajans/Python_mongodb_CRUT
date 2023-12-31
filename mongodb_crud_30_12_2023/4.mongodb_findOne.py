@@ -6,7 +6,7 @@ collection = db["customers"]
 
 # Bir Query (Sorgu) olmaksızın find_one()
 result = collection.find_one()
-print(result) # <class 'dict'>
+print(result)       # <class 'dict'>
 print(type(result))
 
 print(f"Name: {result['name']}\nAddress: {result['address']}\nSalary: {result['salary']}")
@@ -17,4 +17,3 @@ result = collection.find_one(query)   # sadece bir doküman
 print(f"Name: {result['name']}\nAddress: {result['address']}\nSalary: {result['salary']}")
 
 client.close()
-
